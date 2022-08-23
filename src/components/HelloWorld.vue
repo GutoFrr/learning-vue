@@ -1,5 +1,5 @@
 <script setup>
-import AttributeBinding from './AttributeBinding.vue'
+import Essentials from './Essentials.vue'
 
 defineProps({
   msg: String,
@@ -9,7 +9,7 @@ defineProps({
 <template>
   <h1>{{ msg }}</h1>
 
-  <AttributeBinding />
+  <Essentials />
   <p class="read-the-docs">Click on the Vue logo to learn more</p>
 </template>
 
