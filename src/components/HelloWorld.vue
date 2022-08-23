@@ -1,5 +1,6 @@
 <script setup>
 import AttributeBinding from './AttributeBinding.vue'
+
 defineProps({
   msg: String,
 })

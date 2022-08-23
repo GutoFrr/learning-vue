@@ -1,18 +1,29 @@
 <script setup>
-import { ref } from 'vue'
+import { reactive } from 'vue'
 
-const count = ref(0)
+const state = reactive({ count: 0 })
+
+const increaseCount = () => {
+  state.count++
+}
+
+const resetCount = () => {
+  state.count = 0
+}
+
 const isButtonDisabled = [false, true]
 </script>
 
 <template>
   <div class="card btn-container">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <button :disabled="isButtonDisabled[0]" type="button" @click="count = 0">
+    <button type="button" @click="increaseCount">
+      count is {{ state.count }}
+    </button>
+    <button :disabled="isButtonDisabled[0]" type="button" @click="resetCount">
       reset count
     </button>
-    <button :disabled="isButtonDisabled[1]" type="button" @click="count = 100">
-      set count 100
+    <button :disabled="isButtonDisabled[1]" type="button" @click="resetCount">
+      reset count
     </button>
   </div>
 </template>
