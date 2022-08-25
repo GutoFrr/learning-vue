@@ -1,3 +1,7 @@
+<!--
+We can render content conditionally or in a loop with the v-if and v-for directives.
+-->
+
 <script setup>
 import { ref } from 'vue'
 
