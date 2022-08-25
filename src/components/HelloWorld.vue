@@ -1,6 +1,7 @@
 <script setup>
 import AttributeBindings from './AttributeBindings.vue'
 import ConditionalsAndLoops from './ConditionalsAndLoops.vue'
+import FormBindings from './FormBindings.vue';
 
 defineProps({
   msg: String,
@@ -14,11 +15,17 @@ defineProps({
   <AttributeBindings title="Attribute Bindings" />
   <hr />
   <ConditionalsAndLoops title="Conditionals and Loops" />
+  <hr />
+  <FormBindings title="Form Bindings" />
   <p class="read-the-docs">Click on the Vue logo to learn more</p>
 </template>
 
-<style scoped>
+<style>
 .read-the-docs {
   color: #888;
+}
+
+* {
+  text-transform: capitalize;
 }
 </style>
