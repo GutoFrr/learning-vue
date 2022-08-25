@@ -1,5 +1,6 @@
 <script setup>
-import Essentials from './Essentials.vue'
+import AttributeBindings from './AttributeBindings.vue'
+import ConditionalsAndLoops from './ConditionalsAndLoops.vue'
 
 defineProps({
   msg: String,
@@ -9,7 +10,10 @@ defineProps({
 <template>
   <h1>{{ msg }}</h1>
 
-  <Essentials />
+  <hr />
+  <AttributeBindings title="Attribute Bindings" />
+  <hr />
+  <ConditionalsAndLoops title="Conditionals and Loops" />
   <p class="read-the-docs">Click on the Vue logo to learn more</p>
 </template>
 

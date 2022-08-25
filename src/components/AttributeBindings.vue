@@ -1,6 +1,10 @@
 <script setup>
 import { reactive } from 'vue'
 
+defineProps({
+  title: String,
+})
+
 const state = reactive({ count: 0 })
 
 const increaseCount = () => {
@@ -15,6 +19,7 @@ const isButtonDisabled = [false, true]
 </script>
 
 <template>
+  <h2>{{ title }}</h2>
   <div class="card btn-container">
     <button type="button" @click="increaseCount">
       count is {{ state.count }}
@@ -33,5 +38,9 @@ const isButtonDisabled = [false, true]
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
+}
+
+button {
+  text-transform: capitalize;
 }
 </style>
