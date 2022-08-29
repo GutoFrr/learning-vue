@@ -2,7 +2,7 @@
 import AttributeBindings from './AttributeBindings.vue'
 import ConditionalsAndLoops from './ConditionalsAndLoops.vue'
 import FormBindings from './FormBindings.vue'
-import SingleComponent from './SingleComponent.vue'
+import SimpleComponent from './SimpleComponent.vue'
 
 defineProps({
   msg: String,
@@ -19,7 +19,7 @@ defineProps({
   <hr />
   <FormBindings title="Form Bindings" />
   <hr />
-  <SingleComponent title="Single Component" />
+  <SimpleComponent title="Single Component" />
   <p class="read-the-docs">Click on the Vue logo to learn more</p>
 </template>
 
