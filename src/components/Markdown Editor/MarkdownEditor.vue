@@ -1,5 +1,7 @@
 <script setup></script>
 
-<template></template>
+<template>
+  MarkdownEditor
+</template>
 
 <style scoped></style>
