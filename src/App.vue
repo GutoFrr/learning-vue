@@ -34,7 +34,7 @@ const currentView = computed(() => {
       <a href="#/markdownEditor">Markdown Editor</a>
     </div>
   </div>
-  <component :is="currentView" />
+  <component :is="currentView" class="component" />
 </template>
 
 <style scoped>
@@ -59,5 +59,9 @@ const currentView = computed(() => {
 
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+
+.component {
+  padding-block: 30px;
 }
 </style>
