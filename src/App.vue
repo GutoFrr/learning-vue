@@ -25,32 +25,39 @@ const currentView = computed(() => {
 
 <template>
   <div class="navbar">
-    <a href="#/">Home</a>
-    <a href="#/firstSteps">First Steps</a>
-    <a href="#/markdownEditor">Markdown Editor</a>
-  </div>
-  <div>
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
+    <div class="links">
+      <a href="#/">Home</a>
+      <a href="#/firstSteps">First Steps</a>
+      <a href="#/markdownEditor">Markdown Editor</a>
+    </div>
   </div>
   <component :is="currentView" />
 </template>
 
 <style scoped>
-.logo {
-  height: 70px;
-  margin: 10px;
-  will-change: filter;
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
 }
 
-.navbar {
+.links {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+.logo {
+  height: 50px;
+  will-change: filter;
+}
+
+.logo.vue:hover {
+  filter: drop-shadow(0 0 2em #42b883aa);
 }
 </style>
