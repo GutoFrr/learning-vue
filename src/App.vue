@@ -5,12 +5,14 @@ import HelloWorld from './components/First Setps/HelloWorld.vue'
 import MarkdownEditor from './components/Markdown Editor/MarkdownEditor.vue'
 import NotFound from './components/NotFound/NotFound.vue'
 import FetchingData from './components/Fetching Data/FetchingData.vue'
+import SortFilter from './components/Sort and Filter/SortFilter.vue'
 
 const routes = {
   '/': Home,
   '/firstSteps': HelloWorld,
   '/markdownEditor': MarkdownEditor,
   '/fetchingData': FetchingData,
+  '/sortFilter': SortFilter,
   '*': NotFound,
 }
 
@@ -35,6 +37,7 @@ const currentView = computed(() => {
       <a href="#/firstSteps">First Steps</a>
       <a href="#/markdownEditor">Markdown Editor</a>
       <a href="#/fetchingData">Fetching Data</a>
+      <a href="#/sortFilter">Sort and Filter</a>
     </div>
   </div>
   <component :is="currentView" class="component" />
