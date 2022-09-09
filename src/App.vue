@@ -8,6 +8,7 @@ import FetchingData from './components/Fetching Data/FetchingData.vue'
 import SortFilter from './components/Sort and Filter/SortFilter.vue'
 import TreeView from './components/Tree View/TreeView.vue'
 import SVGGraph from './components/SVG Graph/SVGGraph.vue'
+import Modal from './components/Modal/Modal.vue'
 
 const routes = {
   '/': Home,
@@ -17,6 +18,7 @@ const routes = {
   '/sortFilter': SortFilter,
   '/treeView': TreeView,
   '/svgGraph': SVGGraph,
+  '/modal': Modal,
   '*': NotFound,
 }
 
@@ -44,6 +46,7 @@ const currentView = computed(() => {
       <a href="#/sortFilter">Sort and Filter</a>
       <a href="#/treeView">Tree View</a>
       <a href="#/svgGraph">SVG Graph</a>
+      <a href="#/modal">Modal</a>
     </div>
   </div>
   <component :is="currentView" class="component" />
