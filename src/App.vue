@@ -7,6 +7,7 @@ import NotFound from './components/NotFound/NotFound.vue'
 import FetchingData from './components/Fetching Data/FetchingData.vue'
 import SortFilter from './components/Sort and Filter/SortFilter.vue'
 import TreeView from './components/Tree View/TreeView.vue'
+import SVGGraph from './components/SVG Graph/SVGGraph.vue'
 
 const routes = {
   '/': Home,
@@ -15,6 +16,7 @@ const routes = {
   '/fetchingData': FetchingData,
   '/sortFilter': SortFilter,
   '/treeView': TreeView,
+  '/svgGraph': SVGGraph,
   '*': NotFound,
 }
 
@@ -41,6 +43,7 @@ const currentView = computed(() => {
       <a href="#/fetchingData">Fetching Data</a>
       <a href="#/sortFilter">Sort and Filter</a>
       <a href="#/treeView">Tree View</a>
+      <a href="#/svgGraph">SVG Graph</a>
     </div>
   </div>
   <component :is="currentView" class="component" />
