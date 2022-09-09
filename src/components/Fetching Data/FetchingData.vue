@@ -25,7 +25,7 @@ const formatDate = (v) => {
 </script>
 
 <template>
-  <h1>Latest Vue Core Commits</h1>
+  <h2>Fetching Data</h2>
   <template v-for="branch in branches">
     <input
       type="radio"

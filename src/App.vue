@@ -6,6 +6,7 @@ import MarkdownEditor from './components/Markdown Editor/MarkdownEditor.vue'
 import NotFound from './components/NotFound/NotFound.vue'
 import FetchingData from './components/Fetching Data/FetchingData.vue'
 import SortFilter from './components/Sort and Filter/SortFilter.vue'
+import TreeView from './components/Tree View/TreeView.vue'
 
 const routes = {
   '/': Home,
@@ -13,6 +14,7 @@ const routes = {
   '/markdownEditor': MarkdownEditor,
   '/fetchingData': FetchingData,
   '/sortFilter': SortFilter,
+  '/treeView': TreeView,
   '*': NotFound,
 }
 
@@ -38,6 +40,7 @@ const currentView = computed(() => {
       <a href="#/markdownEditor">Markdown Editor</a>
       <a href="#/fetchingData">Fetching Data</a>
       <a href="#/sortFilter">Sort and Filter</a>
+      <a href="#/treeView">Tree View</a>
     </div>
   </div>
   <component :is="currentView" class="component" />

@@ -13,6 +13,7 @@ const gridData = [
 </script>
 
 <template>
+  <h2>Grid Sort and Filter</h2>
   <form id="search">Search <input name="query" v-model="searchQuery" /></form>
   <DemoGrid
     :data="gridData"
@@ -22,4 +23,7 @@ const gridData = [
 </template>
 
 <style scoped>
+  input {
+    margin-bottom: 10px;
+  }
 </style>
