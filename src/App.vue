@@ -1,37 +1,4 @@
-<script setup>
-import { ref, computed } from 'vue'
-import Home from './components/Home/Home.vue'
-import HelloWorld from './components/First Setps/HelloWorld.vue'
-import MarkdownEditor from './components/Markdown Editor/MarkdownEditor.vue'
-import NotFound from './components/NotFound/NotFound.vue'
-import FetchingData from './components/Fetching Data/FetchingData.vue'
-import SortFilter from './components/Sort and Filter/SortFilter.vue'
-import TreeView from './components/Tree View/TreeView.vue'
-import SVGGraph from './components/SVG Graph/SVGGraph.vue'
-import Modal from './components/Modal/Modal.vue'
-
-const routes = {
-  '/': Home,
-  '/firstSteps': HelloWorld,
-  '/markdownEditor': MarkdownEditor,
-  '/fetchingData': FetchingData,
-  '/sortFilter': SortFilter,
-  '/treeView': TreeView,
-  '/svgGraph': SVGGraph,
-  '/modal': Modal,
-  '*': NotFound,
-}
-
-const currentPath = ref(window.location.hash)
-
-window.addEventListener('hashchange', () => {
-  currentPath.value = window.location.hash
-})
-
-const currentView = computed(() => {
-  return routes[currentPath.value.slice(1) || '/'] || NotFound
-})
-</script>
+<script setup></script>
 
 <template>
   <div class="navbar">
@@ -39,17 +6,18 @@ const currentView = computed(() => {
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
     <div class="links">
-      <a href="#/">Home</a>
-      <a href="#/firstSteps">First Steps</a>
-      <a href="#/markdownEditor">Markdown Editor</a>
-      <a href="#/fetchingData">Fetching Data</a>
-      <a href="#/sortFilter">Sort and Filter</a>
-      <a href="#/treeView">Tree View</a>
-      <a href="#/svgGraph">SVG Graph</a>
-      <a href="#/modal">Modal</a>
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/first-steps">First Steps</RouterLink>
+      <RouterLink to="/markdown-editor">Markdown Editor</RouterLink>
+      <RouterLink to="/fetching-data">Fetching Data</RouterLink>
+      <RouterLink to="/sort-filter">Sort and Filter</RouterLink>
+      <RouterLink to="/tree-view">Tree View</RouterLink>
+      <RouterLink to="/svg-graph">SVG Graph</RouterLink>
+      <RouterLink to="/modal">Modal</RouterLink>
+      <RouterLink to="*"></RouterLink>
     </div>
   </div>
-  <component :is="currentView" class="component" />
+  <RouterView />
 </template>
 
 <style scoped>
