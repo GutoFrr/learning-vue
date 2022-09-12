@@ -7,6 +7,7 @@ import SortAndFilter from '../views/SortAndFilter.vue'
 import TreeView from '../views/TreeView.vue'
 import SVGGraph from '../views/SVGGraph.vue'
 import Modal from '../views/Modal.vue'
+import NotFound from '../views/NotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -42,6 +43,10 @@ const router = createRouter({
     {
       path: '/modal',
       component: Modal,
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      component: NotFound,
     },
   ],
 })

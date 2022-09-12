@@ -14,7 +14,6 @@
       <RouterLink to="/tree-view">Tree View</RouterLink>
       <RouterLink to="/svg-graph">SVG Graph</RouterLink>
       <RouterLink to="/modal">Modal</RouterLink>
-      <RouterLink to="*"></RouterLink>
     </div>
   </div>
   <RouterView />
