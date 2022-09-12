@@ -68,4 +68,8 @@ li {
 .date {
   font-weight: bold;
 }
+
+label {
+  margin-right: 20px;
+}
 </style>
